@@ -1,6 +1,6 @@
 <template>
  <!-- Header -->
- <div class="fixed w-full flex items-center justify-between  top-0 text-white z-10">
+ <!-- <div class="fixed w-full flex items-center justify-between  top-0 text-white z-10">
         <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-slate-600 border-none">
           <img class="w-7 h-7 md:w-10 md:h-10 mr-2 rounded-full overflow-hidden" src="https://therminic2018.eu/wp-content/uploads/2018/07/dummy-avatar.jpg" />
           <span class="hidden md:block">ADMIN</span>
@@ -27,11 +27,11 @@
             </li>
           </ul>
         </div>
-      </div> 
+      </div>  -->
       <!-- ./Header -->
     
       <!-- Sidebar -->
-       <div class="fixed flex flex-col  top-0 left-0 w-14 hover:w-64 md:w-64 bg-slate-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
+       <!-- <div class="fixed flex flex-col  top-0 left-0 w-14 hover:w-64 md:w-64 bg-slate-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
         <div class="overflow-y-auto overflow-x-hidden flex flex-col justify-between flex-grow">
           <ul class="flex flex-col py-4 space-y-1">
             <li class="px-5 hidden md:block">
@@ -134,7 +134,7 @@
           </ul>
           <p class="mb-14 px-5 py-3 hidden md:block text-center  text-orange-600 text-xs">Copyright @2023</p>
         </div>
-      </div> 
+      </div>  -->
       <!-- ./Sidebar -->
 
 
