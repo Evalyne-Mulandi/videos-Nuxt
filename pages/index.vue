@@ -161,7 +161,7 @@
           <ul class="flex flex-col py-4 space-y-1">
             <li class="px-5 hidden md:block">
               <div class="flex flex-row items-center h-4">
-                <div class="text-md font-bold    text-orange-600 uppercase">Learn with the best</div>
+                <div class="text-md font-bold    text-orange-600 uppercase">Learners zone</div>
               </div>
             </li>
             <li>
@@ -173,10 +173,15 @@
               </a>
             </li>
             <li>
+              <div class="relative   ml-6 flex flex-row items-center h-11  pr-0 ">
+        <button  class=" inline-flex justify-center items-center  ">
+            <span class="select-none p-2 text-lg font-bold font-mono text-orange-600">COURSES</span> 
+        </button>
+         </div>
               <div class=" ">
     <div class="relative   ml-6 flex flex-row items-center h-11  pr-0 ">
         <button  class=" inline-flex justify-center items-center  ">
-            <span class="select-none p-2 text-lg font-bold font-mono text-orange-600">COURSES</span> 
+            <span class="select-none p-2 text-lg font-bold font-mono underline text-orange-600">BASICS</span> 
         </button>
          </div>
     </div>
@@ -186,45 +191,45 @@
                 <div class="relative rounded-md  ml-3 flex flex-row items-center h-11 hover:bg-orange-600  text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-600 pr-0 ">
         <button  class=" inline-flex justify-center items-center">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+            <span class="select-none p-2 text-sm">Html</span>     
+        </button>
+        </div>
+        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
+        <button  class=" inline-flex justify-center items-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+            <span class="select-none p-2 text-sm">Css</span>     
+        </button>
+        </div>
+        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
+        <button  class=" inline-flex justify-center items-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+            <span class="select-none p-2 text-sm">javascript</span>     
+        </button>
+        </div>
+        <div class="relative   ml-6 flex flex-row items-center h-11  pr-0 ">
+        <button  class=" inline-flex justify-center items-center  ">
+            <span class="select-none p-2 text-lg font-bold font-mono underline text-orange-600">ADVANCED</span> 
+        </button>
+         </div>
+        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
+        <button  class=" inline-flex justify-center items-center">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
             <span class="select-none p-2 text-sm">Data science</span>     
         </button>
         </div>
         <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
         <button  class=" inline-flex justify-center items-center">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Cyber security</span>     
+            <span class="select-none p-2 text-sm">Python</span>     
         </button>
         </div>
         <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
         <button  class=" inline-flex justify-center items-center">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Data mining</span>     
+            <span class="select-none p-2 text-sm">React js</span>     
         </button>
         </div>
-        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
-        <button  class=" inline-flex justify-center items-center">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Deep learning</span>     
-        </button>
-        </div>
-        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
-        <button  class=" inline-flex justify-center items-center">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Artificial intelligence</span>     
-        </button>
-        </div>
-        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
-        <button  class=" inline-flex justify-center items-center">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Computer science</span>     
-        </button>
-        </div>
-        <div class="relative rounded-md  ml-3 flex flex-row items-center h-11  hover:bg-orange-600 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-slate-500 pr-0 ">
-        <button  class=" inline-flex justify-center items-center">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-            <span class="select-none p-2 text-sm">Big data</span>     
-        </button>
-        </div>
+        
 </div>
                    
                
@@ -267,10 +272,11 @@
         <!-- Statistics Cards -->
 
           <main>
-    <h1 class=" m-6 p-14 flex justify-center items-center text-3xl font-extrabold text-white">VueJS <span class="text-orange-600 ">Videos</span></h1>  
+    <h1 class=" m-6 p-14 flex justify-center items-center text-3xl font-extrabold text-white">All <span class="text-orange-600 ">Videos</span></h1>  
 <div class=" mx-auto flex-row flex-wrap flex  justify-center items-center">
   <div  class=" justify-center  gap-y-2 items-center  p-2 " v-for="vidId in videos" :key="vidId.id">
     <iframe width="300" height="200" :src="`https://www.youtube.com/embed/${vidId.videoId}`" title="Vue JS 3 Tutorial for Beginners #1 - Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
   </div>
 </div>
 
@@ -286,19 +292,19 @@
 export default {
  data(){
   return{ 
- videos:[
-  {id:1,videoId:"YrxBCBibVo0?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:2,videoId:"F7PLPJqVotk?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:3,videoId: "CYPZBK8zUik?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:4,videoId: "GWRvrSqnFbM?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:5,videoId: "KM1U6DqZf8M?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:6,videoId:  "bc6czIBLKTg?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:7,videoId:  "ixOcve5PX-Q?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1" },
-  {id:8,videoId:  "juocv4AtrHo?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:9,videoId:  " 7iDGJolHFmU?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:10,videoId: " V-kxBWcPJfo?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"},
-  {id:11,videoId: " 0FwBjPeLqQ8?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1" },
-  {id:12,videoId: " Dj_2j-IKXuo?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"}
+ videos:[   
+  {id:1,videoId:"aP8yrkkLWlM"}, //cybersecurity
+  {id:2,videoId:"X3paOmcrTjQ"}, //data science
+  {id:3,videoId: "-ETQ97mXXF0"}, //data science
+  {id:4,videoId: "8mAITcNt710" }, //computer science
+  {id:5,videoId: "KM1U6DqZf8M?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"}, //vue js
+  {id:6,videoId:  "bc6czIBLKTg?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1"}, //vuejs
+  {id:7,videoId: "csG_qfOTvxw"}, //data science
+  {id:8,videoId:  "ixOcve5PX-Q?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1" }, // vue js
+  {id:9,videoId:  "Kx4y9c7w2JQ"}, //cyber security
+  {id:10,videoId:  "inWWhr5tnEA"}, // cyber security
+  {id:11,videoId: "tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo"}, // computer science
+  {id:12,videoId: "Tzl0ELY_TiM"} //computer science
  ]
   }
  }

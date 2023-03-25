@@ -1,4 +1,4 @@
-
+  <!-- component -->
   <style>
   /* Compiled dark classes from Tailwind */
   .dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
@@ -106,7 +106,7 @@
   .dark .dark\:hover\:text-blue-500:hover {
     color: rgba(59, 130, 246);
   }
-
+  
   /* Custom style */
   .header-right {
       width: calc(100% - 3.5rem);
@@ -119,11 +119,11 @@
           width: calc(100% - 16rem);
       }        
   }
-</style>
-<template>
+  </style>
+  <template>
     
     <div class="min-h-screen flex   flex-col flex-auto  bg-slate-900  text-black">
-
+  
       <!-- Header -->
       <div class="fixed w-full flex items-center justify-between  top-0 text-white z-10">
         <div class="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-slate-600 border-none">
@@ -153,7 +153,6 @@
           </ul>
         </div>
       </div>
-     
       <!-- ./Header -->
     
       <!-- Sidebar -->
@@ -231,7 +230,7 @@
         </button>
         </div>
         
-</div>
+  </div>
                    
                
               
@@ -268,57 +267,52 @@
       </div>
       <!-- ./Sidebar -->
     
- <section class="min-h-screen m flex justify-center items-center ml-52 bg-slate-900  ">
- <div class="w-full lg:w-6/12 px-4 mx-auto">
-   <div class="relative flex flex-col min-w-0 break-words border  border-gray-700 bg-slate-900 w-full mb-6 shadow-xl p-4 rounded-lg mt-16">
-     <div class="px-6">
-       <div class="flex flex-wrap justify-center">
-         <div class="w-full px-4 flex justify-center">
-           <div class="relative ">
-             <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg" alt="" class=" h-20 w-20 flex justify-center items-center mx-auto  rounded-full  ring-white ring-1  bg-white"> 
-           </div>
-         </div>
-         <div class="w-full px-4 text-center">
-          
-         </div>
-       </div>
-       <div class="text-center mt-8">
-         <h3 class="text-2xl font-semibold leading-normal  text-orange-600 mb-2">
-           Evalyne Mulandi
-         </h3>
-         <div class="text-sm leading-normal mt-0 mb-2 text-white font-bold uppercase">
-           <i class="fas fa-map-marker-alt mr-2 text-lg text-white-400"></i>
-           Nakuru , Kenya
-         </div>
-         <div class="mb-2  py-2 border-t border-blueGray-200 text-center  text-white mt-10">
-           <i class="fas fa-briefcase mr-2 text-lg text-white"></i>
-           Software engineer,Graphic designer
-         </div>
-         <div class="mb-2 text-white">
-           <i class="fas fa-university mr-2 text-lg text-white"></i>
-           Contact developer +254757733263
-         </div>
-       </div>
-       <div class="mt-10 py-4 border-t border-white text-center">
-         <div class="flex flex-wrap justify-center">
-           <div class="w-full lg:w-9/12 px-4">
-             <p class="mb-4 text-lg leading-relaxed text-white">
-                I am a technology enthusiast with experience in Graphic design(Adobe creative suite) and Full stack web development.
-               
-             </p>
-             
-           </div>
-         </div>
-       </div>
-     </div>
+      <div class="   md:ml-64">
+    
+        <!-- Statistics Cards -->
+  
+          <main>
+    <h1 class=" m-8 p-14 flex justify-center items-center text-3xl font-extrabold text-white">Javascript <span class="text-orange-600 ">Videos</span></h1>  
+  <div class=" mt-10 mx-auto flex-row flex-wrap flex  justify-center items-center">
+  <div  class=" justify-center   items-center  p-2 " v-for="vidId in videos" :key="vidId.id">
+    <iframe width="300" height="200" :src="`https://www.youtube.com/embed/${vidId.videoId}`" title="Vue JS 3 Tutorial for Beginners #1 - Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+  </div>
+  </div>
+  
+  </main>
    </div>
- </div>
+    </div>
+        
+            
+  </template>
+  <script>
+  export default {
+   data(){
+    return{ 
+   videos:[
+    {id:1,videoId: "PkZNo7MFNFg"},
+    {id:2,videoId: "W6NZfCO5SIk"},  
+    {id:3,videoId: "hdI2bqOjy3c"},
+    {id:4,videoId: "jS4aFq5-91M"},
+    {id:5,videoId: "o1IaduQICO0"},
+    {id:6,videoId: "8dWL3wF_OMw"},
+    {id:7,videoId: "upDLs1sn7g4"},
+    {id:8,videoId: "DHjqpvDnNGE"},
+    {id:9,videoId: "OEV8gMkCHXQ"},
+     
+     
+    
+   ]
+    }
+   }
+  }
+  </script>
+  <style>
+  </style>
   
- </section>
-</div>
- </template>
- <script>
- export default {
   
- }
- </script>
+   
+   
+   
+   

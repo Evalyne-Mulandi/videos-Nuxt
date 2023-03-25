@@ -1,5 +1,5 @@
 <template>
-    <main class=" p-2 pr-10 md:flex hidden justify-end items-center mx-auto flex-row gap-x-20 bg-slate-900">
+    <main class=" p-2 pr-10 md:flex hidden justify-end items-center mx-auto flex-row gap-x-20 bg-gradient-to-r from-slate-600 via-slate-900 to-slate-600 ">
   <div class=" uppercase pr-96 text-orange-600 text-xl flex   font-bold"></div>
   <nav class="  text-white font-bold   p-3 rounded-3xl">
   <router-link to="/">RECOMMENDATION SYSTEM</router-link>

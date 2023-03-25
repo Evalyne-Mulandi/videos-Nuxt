@@ -18,9 +18,7 @@
         <input  v-model="lastName" name="lastName" type="text"  class=" p-2 px-10   rounded-md " required placeholder="Enter your last name"/>
         <span name="lastName" class="text-red-600" />   
         
-        <label class="text-white">Phone Number</label>
-        <input  v-model="phoneNumber" name="phoneNumber" type="number" class=" p-2 px-10 rounded-md" required placeholder="Enter your phone number" />
-        <span name="phoneNumber" class="text-red-600" />
+        
 
         <label class="text-white">Email Address</label>
         <input  v-model="email" name="Email" type="email" class=" p-2 px-10    rounded-md   " autocomplete   required placeholder="Enter your email"/>
