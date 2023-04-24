@@ -1,108 +1,189 @@
 <template>
-    <main class="">
       
       <div class="  p-12 min-h-screen bg-slate-900">
-        <h2 class="mt-4 m-6 text-center text-2xl font-extrabold text-orange-600">
+         
+   
+        <div class="w-1/2 mx-auto">
+      <!-- success alert -->
+      <div class="mb-4 max-w-sm mx-auto" v-if="success">
+        <div
+          class="bg-green-700 border text-white px-4 py-3 rounded relative"
+          role="alert"
+        >
+          <strong class="font-bold">Success!</strong>
+          <span class="block sm:inline">{{ success }}.</span>
+        </div>
+      </div>
+      <!-- error alert -->
+      <div class="mb-4 max-w-sm mx-auto" v-if="errMsg">
+        <div
+          class="bg-red-500   text-white px-4 py-3 rounded relative"
+          role="alert"
+        >
+          <strong class="font-bold">Error!</strong>
+          <span class="block sm:inline">{{ errMsg }}.</span>
+        </div>
+      </div>
+    </div>
+    <!-- approval alert -->
+    <div class="mb-4 max-w-sm mx-auto" v-if="approval">
+      <div
+        class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded relative"
+        role="alert"
+      >
+        <strong class="font-bold">Approval!</strong>
+        <span class="block sm:inline">{{ approval }}.</span>
+      </div>
+    </div>
+
+    <!-- register form using  tailwindcss -->
+    <div class="max-w-md mx-auto my-4 p-4 bg-transparent border border-white rounded-md shadow-md">
+      <h2 class="text-center text-2xl font-extrabold text-orange-600">
           Sign up to your account 
         </h2>
-   
-        <form @submit.prevent="onSubmit"   class="  py-4 md:border border-white mt-1 flex flex-col gap-y-2  mx-auto justify-center items-center max-w-lg
-            bg-transparent text-black rounded-md">
-            <img src=" https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg" alt="" class="  flex justify-center items-center mx-auto h-8 w-8 rounded-full bg-white"> 
-          
-        <label class="text-white">First Name</label>
-        <input  v-model="firstName" name="firstName" type="text" class=" p-2 px-10   rounded-md " required placeholder="Enter your first name"/>
-        <span name="firstName" class="text-red-600" />
-        
-        <label class="text-white">last Name</label>
-        <input  v-model="lastName" name="lastName" type="text"  class=" p-2 px-10   rounded-md " required placeholder="Enter your last name"/>
-        <span name="lastName" class="text-red-600" />   
-        
-        
-
-        <label class="text-white">Email Address</label>
-        <input  v-model="email" name="Email" type="email" class=" p-2 px-10    rounded-md   " autocomplete   required placeholder="Enter your email"/>
-        <span name="Email"  class="text-red-600"/>
-
-        <label class="text-white">Password</label>
-        <input  v-model="password" name="password" type="password"  class=" p-2 px-10   rounded-md " autocomplete placeholder="Enter your password"/>
-        <span name="password"  class="text-red-600" v-show="passErrorActivate">{{passwordError}}</span>  
-
-        <label class="text-white">confirm Password</label>
-        <input  v-model="confirmPassword" name=" confirmPassword" type="password"  class=" p-2 px-10   rounded-md " autocomplete placeholder="Confirm your password"/>
-        <span name="password"  class="text-red-600" v-show="passErrorActivate">{{passwordError}}</span>
-        <button class=" rounded-lg px-6 py-2 p-4 gap-2 text-orange-600 hover:text-black hover:bg-orange-600 bg-black" type="submit">Submit</button>
-        <div class="  text-orange-600  font-bold"> Already have an account? <span><router-link to="/signup" class="  text-white">login</router-link></span></div>
-      </Form>
-      </div>
-    </main>
-  </template>
-  
-  <script>   
-  export default{
-    data(){
-      return{
-       firstName:"",
-       lastName:"",
-       phoneNumber:"",
-       email:"",
-       password:"",
-       confirmPassword:"",
-       passwordError:"password must be atleast 8 characters",
-       passErrorActivate:false
-  
-      }
-    },
-    methods:{
       
-      async onSubmit(){
-        const pattern="^0(7(?:(?:[129][0-9])|(?:0[0-8])|(4[0-1]))[0-9]{6})$"
-        let num="0768982944"
-         const found = num.match(pattern);
-      if(this.password.length<8 && this.confirmPassword.length<8){
-        this.passErrorActivate=true
-      }/* else if(found){
-         alert("wrong phone number")
-         console.log(found);
-      } */
-      else{
-        /* let url="http://localhost:7000/signup/" */
-        let url="api/v1/signup/"
-         let data=JSON.stringify({
-          firstName: this. firstName,
-                      lastName: this.lastName,
-                      phoneNumber:this.phoneNumber,
-                      email: this.email,
-                      password: this.password,
-                      confirmPassword: this.confirmPassword,
-         })
-         let res= await fetch(url,{
-           headers:{
-             "Content-type":"application/json"
-           },
-           method:"POST",
-           body:data
-         })
-         if(res.ok){
-           let data=await res.json()
-           console.log(data);
-           alert(data.message)
-           this.$router.push("/login")
-         }
-         else{
-           let data=await res.json()
-           console.log(data)
-           alert(data.message)
-         }
-      }
-        
-     }
-    }
+       
+      <Loading v-if="loading" />
+      <form @submit.prevent="register">
+        <div class="mb-4">
+          <label class="block text-white font-medium mb-2" for="email"> Email </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            v-model="email"
+            type="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-white font-medium mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            v-model="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-white font-medium mb-2" for="password-confirm">
+            Confirm Password
+          </label>
+          <input
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password-confirm"
+            v-model="passwordConfirm"
+            type="password"
+            placeholder="Confirm your password"
+          />
+        </div>
+        <button
+          class="bg-orange-600 justify-center   flex items-center hover:bg-black text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+      <!-- continue github  button-->
+      <div class="flex items-center mt-4">
+        <hr class="border-gray-300 border-1 w-full rounded-md" />
+        <span class="px-2 text-gray-400 text-sm">Or</span>
+        <hr class="border-gray-300 border-1 w-full rounded-md" />
+      </div>
+      <!-- signup with github -->
+      <div class="flex items-center mt-4">
+        <button
+          @click="loginWithGithub"
+          class="flex items-center justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-800 border border-transparent rounded-lg active:bg-gray-800 hover:bg-gray-700 focus:outline-none focus:shadow-outline-gray"
+        >
+          <svg
+            class="w-4 h-4 mr-3"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 0a10 10 0 100 20 10 10 0 000-20zm4.5 6a.5.5 0 01.5.5v2.5a.5.5 0 01-1 0V7h-2a.5.5 0 010-1h2V4.5a.5.5 0 01.5-.5zM10 18a7.5 7.5 0 110-15 7.5 7.5 0 010 15zm0-2a5.5 5.5 0 100-11 5.5 5.5 0 000 11z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <span class="">Sign up with GitHub</span>
+        </button>
+        <!-- already have an account -->
+      </div>
+      <p class="mt-4 font-bold text-orange-600 items-center justify-center flex">
+        Already have an account?
+        <NuxtLink to="Login" class="text-white hover:underline"> Sign in </NuxtLink>
+      </p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+const auth = useSupabaseAuthClient();
+const router = useRouter();
+let email = ref("");
+let password = ref("");
+let passwordConfirm = ref("");
+let errMsg = ref(null);
+let loading = ref(false);
+let success = ref("");
+let approval = ref("");
+
+const register = async () => {
+  if (password.value !== passwordConfirm.value) {
+    errMsg.value = "Passwords do not match";
+    return;
   }
-  
-  
-  </script>
-  
-  <style>
-  
-  </style>
+  try {
+    loading.value = true;
+    errMsg.value = null;
+    const { user, error } = await auth.auth.signUp({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) {
+      loading.value = false;
+      errMsg.value = error.message;
+    } else {
+      success.value = "Registration successful";
+      approval.value = "Please check your email for approval";
+      setTimeout(() => {
+        loading.value = false;
+      }, 3000);
+      email.value = "";
+      password.value = "";
+      passwordConfirm.value = "";
+      setTimeout(() => {
+        router.push("/Login");
+      }, 3000);
+    }
+  } catch (err) {
+    loading.value = false;
+    errMsg.value = err.message;
+  }
+};
+/* signin with github */
+const loginWithGithub = async () => {
+  const { error } = await auth.auth.signInWithOAuth({
+    provider: "github",
+  });
+  if (error) {
+    errMsg.value = error.message;
+  } else {
+    setTimeout(() => {
+      loading.value = false;
+    }, 5000);
+    email.value = "";
+    password.value = "";
+    passwordConfirm.value = "";
+    router.push("Dashboard");
+  }
+};
+</script>
+
+<style scoped></style>
